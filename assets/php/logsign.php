@@ -36,7 +36,7 @@
       </div>
 
       <div class="back-button">
-        <a href="../../landingpage.html">Back</a>
+        <a href="../../landingpage.php">Back</a>
     </div>
     <div class="container">
         <div class="form-container">

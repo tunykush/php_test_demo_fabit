@@ -65,7 +65,7 @@
 
   <div class="buttons">
     <a href="javascript:void(0)" onclick="validateForm()">Submit</a>
-    <a href="/landingpage.html" id="cancelButton">Cancel</a>
+    <a href="/landingpage.php" id="cancelButton">Cancel</a>
   </div>
 </form>
 

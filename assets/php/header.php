@@ -46,7 +46,7 @@
 
             <li class="navbar-item">
               <a
-                href="./assets/html/buynsell.html"
+                href="./assets/php/buynsell.php"
                 class="navbar-link"
                 data-nav-link
                 >Buy Crypto</a
@@ -54,7 +54,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="landingpage.html" class="navbar-link" data-nav-link
+              <a href="landingpage.php" class="navbar-link" data-nav-link
                 >Markets</a
               >
             </li>
@@ -84,10 +84,10 @@
         </button>
 
         <div class="btn-containerr">
-          <a href="assets/html/logsign.html" id="loginBtn" class="btn-stroke"
+          <a href="assets/php/logsign.php" id="loginBtn" class="btn-stroke"
             >Login</a
           >
-          <a href="assets/html/logsign.html" id="signupBtn" class="btn-stroke"
+          <a href="assets/php/logsign.php" id="signupBtn" class="btn-stroke"
             >Sign Up</a
           >
           <div class="line-next-to-btn"></div>
