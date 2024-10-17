@@ -25,61 +25,67 @@ function generateCaptcha() {
 
     // Store the captcha text inside the canvas for later validation
     captchaCanvas.dataset.captchaText = captchaText;
+
+    //lưu captcha vào server
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/savecaptcha.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send("captcha=" + captchaText);
 }
 
 // Validate Login Form
-function validateLoginForm(event) {
-    // event.preventDefault();
-    // const username = document.getElementById("loginUsername").value.trim();
-    // const password = document.getElementById("loginPassword").value.trim();
-    const captchaInput = document.getElementById("captchaInput").value.trim();
-    const captchaText = document.getElementById("captchaCanvas").dataset.captchaText;
+// function validateLoginForm(event) {
+//     // event.preventDefault();
+//     // const username = document.getElementById("loginUsername").value.trim();
+//     // const password = document.getElementById("loginPassword").value.trim();
+//     const captchaInput = document.getElementById("captchaInput").value.trim();
+//     const captchaText = document.getElementById("captchaCanvas").dataset.captchaText;
 
-    // // Get stored users from localStorage
-    // const users = JSON.parse(localStorage.getItem("users")) || [];
+//     // // Get stored users from localStorage
+//     // const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // // Check if the user exists in the stored data
-    // const userExists = users.find(user => user.username === username && user.password === password);
+//     // // Check if the user exists in the stored data
+//     // const userExists = users.find(user => user.username === username && user.password === password);
 
-    if (captchaInput !== captchaText) {
-        alert("Incorrect Captcha. Please try again.");
-        generateCaptcha();
-        return false;
-    }
-    return true;
+//     if (captchaInput !== captchaText) {
+//         alert("Incorrect Captcha. Please try again.");
+//         generateCaptcha();
+//         return false;
+//     }
+//     return true;
 
-    // if (userExists) {
-    //     alert("Login successful!");
-    // } else {
-    //     alert("Invalid username or password. Please check your credentials.");
-    // }
-}
+//     // if (userExists) {
+//     //     alert("Login successful!");
+//     // } else {
+//     //     alert("Invalid username or password. Please check your credentials.");
+//     // }
+// }
 
-// Validate Signup Form
-function validateSignupForm(event) {
-    event.preventDefault();
-    const username = document.getElementById("signupUsername").value.trim();
-    const email = document.getElementById("signupEmail").value.trim();
-    const password = document.getElementById("signupPassword").value.trim();
+// // Validate Signup Form
+// function validateSignupForm(event) {
+//     event.preventDefault();
+//     const username = document.getElementById("signupUsername").value.trim();
+//     const email = document.getElementById("signupEmail").value.trim();
+//     const password = document.getElementById("signupPassword").value.trim();
 
-    // Get stored users from localStorage
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+//     // Get stored users from localStorage
+//     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if username or email already exists
-    const userExists = users.some(user => user.username === username || user.email === email);
-    if (userExists) {
-        alert("Username or email already exists. Please choose another.");
-        return false;
-    }
+//     // Check if username or email already exists
+//     const userExists = users.some(user => user.username === username || user.email === email);
+//     if (userExists) {
+//         alert("Username or email already exists. Please choose another.");
+//         return false;
+//     }
 
-    // Add new user to the list and save to localStorage
-    users.push({ username, email, password });
-    localStorage.setItem("users", JSON.stringify(users));
+//     // Add new user to the list and save to localStorage
+//     users.push({ username, email, password });
+//     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Signup successful! You can now login.");
-    // Switch to the login form after signup
-    document.getElementById("loginBtn").click();
-}
+//     alert("Signup successful! You can now login.");
+//     // Switch to the login form after signup
+//     document.getElementById("loginBtn").click();
+// }
 
 // Initialize captcha on page load
 window.onload = generateCaptcha;
