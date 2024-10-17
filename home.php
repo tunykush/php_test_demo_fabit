@@ -219,9 +219,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
       </div>
     </div>
 
-    <script src="./constants/recent-order-data.js"></script>
-    <script src="./constants/update-data.js"></script>
-    <script src="./constants/sales-analytics-data.js"></script>
-    <script src="./home.js"></script>
+    <script src="/assets/js/homejs/recent-order-data.js"></script>
+    <script src="/assets/js/homejs/update-data.js"></script>
+    <script src="/assets/js/homejs/sales-analytics-data.js"></script>
+    <script src="/assets/js/home.js"></script>
   </body>
 </html>
