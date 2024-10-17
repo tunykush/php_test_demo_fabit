@@ -1,3 +1,22 @@
+<?php
+session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
+    unset($_SESSION['username']);
+    header("Location:./landingpage.php");
+    exit;
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,9 +83,11 @@
             <span class="material-icons-sharp"> add </span>
             <h3>Add Product</h3>
           </a>
-          <a href="#">
+          <a href="">
+            <form action="" method="POST">
+            <input name="logout" hidden>
             <span class="material-icons-sharp"> logout </span>
-            <h3>Logout</h3>
+            <input type="submit" value="Logout" class="logout"></form>
           </a>
         </div>
       </aside>
