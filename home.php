@@ -18,7 +18,7 @@
       <aside>
         <div class="top">
           <div class="logo">
-            <img src="./images/logo.png" alt="Logo" />
+            <img src="../ffavicon.svg" alt="Logo" />
             <h2>Fabit<span class="danger"></span></h2>
           </div>
           <div class="close" id="close-btn">
@@ -169,11 +169,11 @@
           </div>
           <div class="profile">
             <div class="info">
-              <p>Hey, <b>Bruno</b></p>
-              <small class="text-muted">Admin</small>
+              <p>Hey, <b>Member</b></p>
+              <small class="text-muted">User</small>
             </div>
             <div class="profile-photo">
-              <img src="./images/profile-1.jpg" alt="Profile Picture" />
+              <img src="./assets/images/ava.png" alt="Profile Picture" />
             </div>
           </div>
         </div>
