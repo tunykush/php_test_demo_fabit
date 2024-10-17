@@ -29,29 +29,30 @@ function generateCaptcha() {
 
 // Validate Login Form
 function validateLoginForm(event) {
-    event.preventDefault();
-    const username = document.getElementById("loginUsername").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
+    // event.preventDefault();
+    // const username = document.getElementById("loginUsername").value.trim();
+    // const password = document.getElementById("loginPassword").value.trim();
     const captchaInput = document.getElementById("captchaInput").value.trim();
     const captchaText = document.getElementById("captchaCanvas").dataset.captchaText;
 
-    // Get stored users from localStorage
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+    // // Get stored users from localStorage
+    // const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if the user exists in the stored data
-    const userExists = users.find(user => user.username === username && user.password === password);
+    // // Check if the user exists in the stored data
+    // const userExists = users.find(user => user.username === username && user.password === password);
 
     if (captchaInput !== captchaText) {
         alert("Incorrect Captcha. Please try again.");
         generateCaptcha();
         return false;
     }
+    return true;
 
-    if (userExists) {
-        alert("Login successful!");
-    } else {
-        alert("Invalid username or password. Please check your credentials.");
-    }
+    // if (userExists) {
+    //     alert("Login successful!");
+    // } else {
+    //     alert("Invalid username or password. Please check your credentials.");
+    // }
 }
 
 // Validate Signup Form

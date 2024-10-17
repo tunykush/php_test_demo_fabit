@@ -45,14 +45,42 @@
                 <button class="login-form-buttons" id="signupBtn">Sign Up</button>
             </div>
             <!-- Login Form -->
-            <form id="loginForm" class="form" onsubmit="return validateLoginForm(event)">
+            <?php
+           
+            session_start();
+
+            if (isset($_SESSION['username'])) {
+                header("Location: header.php");
+                exit;
+            }
+
+            $loginError = "";
+            $username = "";
+            $password = "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
+              
+                $username = $_POST['loginUsername'];
+                $password = $_POST['loginPassword'];
+
+                if ($username === "abc@gmail.com" && $password === "123456") {
+            
+                    $_SESSION['username'] = $username;
+                    header("Location: header.php");
+                    exit;
+                } else {
+                    $loginError = "Username or Password incorrect!";
+                }
+            }
+            ?>
+            <form id="loginForm" class="form" method="POST" onsubmit="return validateLoginForm(event)">
                 <h2>Log In</h2>
                 <div class="input-wrapper">    
-                    <input class="input-field" type="text" id="loginUsername" placeholder=" " required>
+                    <input class="input-field" type="text" id="loginUsername" name="loginUsername" placeholder=" " required>
                     <label class="input-label">Username</label>
                 </div>
                 <div class="input-wrapper">    
-                    <input class="input-field" type="password" id="loginPassword" placeholder=" " required>
+                    <input class="input-field" type="password" id="loginPassword" name = "loginPassword" placeholder=" " required>
                     <label class="input-label">Password</label>
                 </div>
                 <div class="captcha-container">
@@ -65,9 +93,9 @@
                     <input class="input-field" type="text" id="captchaInput" placeholder=" " required>
                     <label class="input-label">Enter Captcha</label>
                 </div>
-                <button type="submit">Log In</button>
+                <button type="submit" name="login" >Log In</button>
             </form>
-
+            
             <!-- Signup Form -->
             <form id="signupForm" class="form hidden" onsubmit="return validateSignupForm(event)">
                 <h2>Sign Up</h2>
