@@ -51,8 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
             <h3>Dashboard</h3>
           </a>
           <a href="#">
-            <span class="material-icons-sharp"> person_outline </span>
-            <h3>Customers</h3>
+            <span class="material-icons-sharp"> arrow_circle_up </span>
+            <h3>Tranfers</h3>
           </a>
           <a href="#">
             <span class="material-icons-sharp"> receipt_long </span>
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
           </a>
           <a href="#">
             <span class="material-icons-sharp"> inventory </span>
-            <h3>Products</h3>
+            <h3>Lists</h3>
           </a>
           <a href="#">
             <span class="material-icons-sharp"> report_gmailerrorred </span>
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
           </a>
           <a href="#">
             <span class="material-icons-sharp"> add </span>
-            <h3>Add Product</h3>
+            <h3>Add coin</h3>
           </a>
           <a href="">
             <form action="" method="POST">
@@ -200,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
         </div>
 
         <div class="square">
-          <h2>Square</h2>
+          <h2>News</h2>
           <!-- Add updates div here | JS insertion -->
         </div>
 
