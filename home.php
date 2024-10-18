@@ -55,9 +55,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
             <h3>Tranfers</h3>
           </a>
           <a href="#">
+            <span class="material-icons-sharp"> arrow_circle_down</span>
+            <h3>Deposit</h3>
+            </a>
+          <a href="#">
             <span class="material-icons-sharp"> receipt_long </span>
             <h3>Orders</h3>
           </a>
+            <a href="#">
+                <span class="material-icons-sharp"> credit_card </span>
+                <h3>Payments</h3>
+            </a>
           <a href="#">
             <span class="material-icons-sharp"> insights </span>
             <h3>Analytics</h3>
@@ -78,10 +86,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
           <a href="#">
             <span class="material-icons-sharp"> settings </span>
             <h3>Settings</h3>
-          </a>
-          <a href="#">
-            <span class="material-icons-sharp"> add </span>
-            <h3>Add coin</h3>
           </a>
           <a href="">
             <form action="" method="POST">
