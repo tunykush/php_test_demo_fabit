@@ -85,9 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
           </a>
           <a href="">
             <form action="" method="POST">
-            <input name="logout" hidden>
-            <span class="material-icons-sharp"> logout </span>
-            <input type="submit" value="Logout" class="logout"></form>
+                <input name="logout" hidden>
+                <span class="material-icons-sharp"> logout </span>
+                <!-- <h3>Logout</h3> -->
+                <input type="submit" value="Logout" class="logout">
+            </form>
           </a>
         </div>
       </aside>

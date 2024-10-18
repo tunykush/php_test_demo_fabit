@@ -1,23 +1,23 @@
 const SALES_ANALYTICS_DATA = [
   {
-    icon: "./images/BTC.jpg",
+    icon: "/assets/images/BTC.jpg",
     name: "BTC",
     colorClass: "success",
     percentage: "+5.00",
     price: "$67,387.97",
   },
   {
-    icon: "./images/ETH.jpg",
+    icon: "../assets/images/coin2.svg",
     name: "ETH",
     colorClass: "danger",
     percentage: "-1.00",
     price: "$2,618.68",
   },
   {
-    icon: "./images/DOGE.jpg",
-    name: "DOGE",
+    icon: "/assets/images/coin3.svg",
+    name: "USDT tether",
     colorClass: "danger",
-    percentage: "+2.00",
-    price: "$0.12688",
+    percentage: "-2.00",
+    price: "$1.0688",
   },
 ];
