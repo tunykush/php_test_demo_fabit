@@ -67,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
                 <h3>Payments</h3>
             </a>
           <a href="#">
-            <span class="material-icons-sharp"> insights </span>
-            <h3>Analytics</h3>
+            <span class="material-icons-sharp"> token </span>
+            <h3>Spot</h3>
           </a>
           <a href="#">
             <span class="material-icons-sharp"> mail_outline </span>
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
             <div class="middle">
               <div class="left">
                 <h3>Balance</h3>
-                <h1>$00.00</h1>
+                <h1>$1000.00</h1>
               </div>
               <div class="progress">
                 <svg>
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
             <div class="middle">
               <div class="left">
                 <h3>Today's Pnl</h3>
-                <h1>$14,160</h1>
+                <h1>$141.60</h1>
               </div>
               <div class="progress">
                 <svg>
@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
             <div class="middle">
               <div class="left">
                 <h3>Total Income</h3>
-                <h1>$10,864</h1>
+                <h1>$30.64</h1>
               </div>
               <div class="progress">
                 <svg>
@@ -196,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
           </div>
           <div class="profile">
             <div class="info">
-              <p>Hey, <b>Member</b></p>
+              <p>Welcome back, <b>Member</b></p>
               <small class="text-muted">User</small>
             </div>
             <div class="profile-photo">
