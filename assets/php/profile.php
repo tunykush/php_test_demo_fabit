@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    var_dump($userList);
+    
 
     $_SESSION['users'] = $userList;
     if (isset($newPassword) && !empty($newPassword)) {
