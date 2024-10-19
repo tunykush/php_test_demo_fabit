@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="shortcut icon" href="ffavicon.svg" type="image/svg+xml" />
     
   </head>
   <body>
