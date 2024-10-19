@@ -103,6 +103,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         <img src="../images/star19.svg" alt="Random Image" class="falling-image">
         <img src="../images/star20.svg" alt="Random Image" class="falling-image">
         <img src="../images/star21.svg" alt="Random Image" class="falling-image">
+        <img src="../images/star22.svg" alt="Random Image" class="falling-image">
+        <img src="../images/star23.svg" alt="Random Image" class="falling-image">
+        <img src="../images/star24.svg" alt="Random Image" class="falling-image">
+        <img src="../images/star25.svg" alt="Random Image" class="falling-image">
     </div>
 
     <div class="back-button">
