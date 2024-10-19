@@ -1,22 +1,25 @@
 <?php
 session_start();
+// if ($_SESSION['username'] == null) {
+//     header("Location:./landingpage.php");
+//     exit;
+// }
+
+$userList = $_SESSION['users'];
+$currentUser = null;
+
+foreach ($userList as $user) {
+    if ($user['username'] == $_SESSION['username']) {
+        $currentUser = $user;
+    }
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
     unset($_SESSION['username']);
     header("Location:./landingpage.php");
     exit;
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -83,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
             <span class="material-icons-sharp"> report_gmailerrorred </span>
             <h3>Reports</h3>
           </a>
-          <a href="#">
+          <a href="./assets/php/profile.php">
             <span class="material-icons-sharp"> settings </span>
             <h3>Settings</h3>
           </a>
@@ -196,11 +199,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
           </div>
           <div class="profile">
             <div class="info">
-              <p>Welcome back, <b>Member</b></p>
+              <p>Welcome back, <b><?php echo $currentUser['username'] ?></b></p>
               <small class="text-muted">User</small>
             </div>
             <div class="profile-photo">
-              <img src="./assets/images/ava.png" alt="Profile Picture" />
+              <img src="<?php echo "./assets/images/avatar/".$currentUser['avatar']; ?>" alt="Profile Picture" />
             </div>
           </div>
         </div>

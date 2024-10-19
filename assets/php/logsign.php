@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     $newUser = array(
         "username" => $username,
         "email" => $email,
-        "password" => $password
+        "password" => $password,
+        "avatar" => "default.png"
     );
 
     if (!isset($_SESSION['users']) || !is_array($_SESSION['users'])) {
